@@ -15,11 +15,8 @@
     };
     pyKernel = pkgs.python3.withPackages (p:
       with p; [
-        pip
         jupyter
         ipykernel
-        matplotlib
-        stanza
       ]);
   in {
     devShells.${system}.default = pkgs.mkShell {
